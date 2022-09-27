@@ -40,7 +40,7 @@ resource "aws_s3_bucket" "bucket" {
 }
 
 resource "aws_lambda_function" "func" {
-  filename      = "zip_files/lambda_csv_2_dynamodb.zip"
+  filename      = "zip_files/lambda_csv_2_dynamodb.py"
   function_name = "${var.function_name}-lambda-func"
   role          = aws_iam_role.iam_for_lambda.arn
   handler       = "lambda_csv_2_dynamodb.lambda_handler"
@@ -49,7 +49,7 @@ resource "aws_lambda_function" "func" {
 }
 
 resource "aws_lambda_function" "rest_api" {
-  filename      = "zip_files/lambda_rest_api.zip"
+  filename      = "zip_files/lambda_rest_api.py"
   function_name = "${var.function_name}-rest-api"
   role          = aws_iam_role.iam_for_lambda.arn
   handler       = "lambda_rest_api.lambda_handler"
