@@ -12,9 +12,9 @@ Clone repo:
       export AWS_SECRET_ACCESS_KEY="YOUR_SECRETY_ACCESS_KEY"
       export AWS_DEFAULT_REGION="us-east-1"
  
- Tips: 
-       - Remember that S3 bucket name must be unique across all AWS.
-       - Region defined in the files: "us-east-1"
+ Tips:
+   - Remember that S3 bucket name must be unique across all AWS.
+   - - Region defined in the files: "us-east-1"
        
        
  1. Existing S3 bucket with name: bucket = "${var.function_name}-bucket007-20220913". defined in file lambda.tf line # 39 must exist before running terraform plan/apply.   (csv-2-dynamodb-bucket007-20220913)
