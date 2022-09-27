@@ -26,7 +26,7 @@ def lambda_handler(event, context):
         
         for row in csvReader:
             rows += 1
-            id = row[0]
+            Order_id = row[0]
             Patron_id = row[1]
             Order_date = row[2]
             Order_status = row[3]
@@ -171,8 +171,8 @@ def lambda_handler(event, context):
             # Insert record in DynamoDB table
             response = db.put_item(TableName = 'Customers',
                 Item = {
-                    'Id': {
-                        'S': str(id)
+                    'Order_ID': {
+                        'S': str(Order_id)
                     },
                     'Patron_ID': {
                         'S': str(Patron_id)

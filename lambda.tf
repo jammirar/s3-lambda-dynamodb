@@ -3,11 +3,11 @@ resource "aws_dynamodb_table" "customer-table" {
   billing_mode   = "PROVISIONED"
   read_capacity  = 10
   write_capacity = 10
-  hash_key       = "Id"
+  hash_key       = "Barcode"
 
   attribute {
-    name = "Id"
-    type = "N"
+    name = "Barcode"
+    type = "S"
   }
 }
 
